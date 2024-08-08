@@ -31,7 +31,7 @@ Instalar dependencias
 composer install
 ```
 
-Modificar archivo .env, se deja .env.example, deben modificarse las siguientes variables de acuerdo a sus necesidades
+Crear archivo .env, se deja .env.example, deben modificarse las siguientes variables de acuerdo a sus necesidades
 
 ```bash
   DB_CONNECTION=mysql
@@ -96,6 +96,30 @@ _**Nota: también existirán usuarios de prueba creados por los seeders**_
 ```
 
 #### Con el Authorization Bearer Token podrás consumir los endpoints que están en la documentación postman.
+
+## Pruebas unitarias
+
+Crear archivo .env.testing, se deja .env.example, deben modificarse las siguientes variables de acuerdo a sus necesidades
+
+```bash
+#Puede usar el mismo del .env
+APP_KEY=
+#Base de datos de prueba
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=
+#Puede usar el mismo del .env
+JWT_SECRET=
+```
+
+Para realizar las pruebas unitarias, debe ejecutar:
+
+```bash
+vendor/bin/phpunit
+```
 
 ## 🔗 Links
 
